@@ -8,9 +8,9 @@ OS Distribution: Kali GNU/Linux Rolling
 Kernel version: 4.14.0-kali3-amd64
 Installation date: Mar 20 02:29
 Hostname: kalinx
-Uptime: 5 hours, 45 minutes
-Processes running: 212
-Users logged in: load
+Uptime: 5 hours, 52 minutes
+Processes running: 211
+Users logged in: 1
 --- Network ---
 lo: 127.0.0.1/8
 eth0: 
