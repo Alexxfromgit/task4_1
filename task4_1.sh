@@ -21,7 +21,7 @@ echo "Installation date: `ls -clt / | tail -n 1 | awk '{ print $6, $7, $8 }'`"
 echo "Hostname: `hostname`"
 echo "Uptime: `uptime -p | cut -c4-`"
 echo "Processes running: `ps -e | wc -l`"
-echo "Users logged in: `uptime | cut -d "," -f 3 | cut -d " " -f 3`"
+echo "Users logged in: `uptime | cut -d "," -f 2 | cut -d " " -f 3`"
 
 echo "--- Network ---"
 for Iface in $(ip addr list | grep "UP" | awk '{print $2}' | cut -d ":" -f 1 | cut -d "@" -f 1)
