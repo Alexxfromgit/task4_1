@@ -2,11 +2,19 @@
 
 output_file=`dirname $0`"/task4_1.out"
 exec 1>$output_file
+# exec 1>task4_1.out
 
 echo "--- Hardware ---"
+# echo "CPU:" $(lscpu | grep "Model name" | cut -d : -f 2)
 echo "CPU: `cat /proc/cpuinfo | grep "model name" -m1 | cut -c14- || echo 'Unknown'`" 
-echo "RAM: `cat /proc/meminfo | grep MemTotal | awk '{print $2$3}' || echo 'Unknown'`" 
-echo "Motherboard: `dmidecode -s baseboard-product-name || echo 'Unknown'`"
+echo "RAM: `cat /proc/meminfo | grep MemTotal | awk '{print $2" " $3}' || echo 'Unknown'`" 
+MB1=`dmidecode -s baseboard-manufacturer`
+MB2=`dmidecode -s baseboard-product-name`
+if [ -z "${MB1// /}" ] ; then MB1="" ; fi
+if [ -z "${MB2// /}" ] ; then MB2="Unknown" ; fi
+MB=$MB1$MB2
+echo "Motherboard: $MB" 
+#echo "Motherboard: `dmidecode -s baseboard-product-name || echo 'Unknown'`"
 echo "System Serial Number: `dmidecode -s system-serial-number || echo 'Unknown'`"
 
 echo "--- System ---"

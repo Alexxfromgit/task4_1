@@ -1,17 +1,17 @@
 --- Hardware ---
 CPU: Intel(R) Pentium(R) CPU B950 @ 2.10GHz
-RAM: 3948568kB
-Motherboard: 0FTJWD
+RAM: 3948568 kB
+Motherboard: Dell Inc.0FTJWD
 System Serial Number: 6VL7GR1
 --- System ---
 OS Distribution: Kali GNU/Linux Rolling
 Kernel version: 4.14.0-kali3-amd64
-Installation date: Mar 20 02:29
-Hostname: kalinx
-Uptime: 11 hours, 21 minutes
-Processes running: 218
+Installation date: Apr 6 22:33
+Hostname: netshark
+Uptime: 16 hours, 59 minutes
+Processes running: 214
 Users logged in: 1
 --- Network ---
 lo: 127.0.0.1/8
 eth0: 
-wlan0: 192.168.1.105/24
+wlan0: 192.168.1.103/24
