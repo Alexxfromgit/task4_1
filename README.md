@@ -1,34 +1,37 @@
 # task4_1
 
-Общие требования к выполнению:
+Общие требования:
 
     1. Для проверки будет использована свежеустановленная VM из этого образа - https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-disk1.img
     2. Для выполнения разрешается устанавливать любые дополнительные пакеты. В случае использования пакетов, которые не установлены в образе, необходимо предусмотреть их установку.
     3. Запуск скриптов во время проекта будет осуществляться от имени root
 
-Задание 4.1 - Сбор сведений о системе
-Условие задания
-Создайте bash скрипт ‘task4_1.sh’, который собирает базовую информацию об аппаратной части, операционной системе и конфигурации сетевых интерфейсов. В результате выполнения этого скрипта необходимо сформировать файл ‘task4_1.out’ следующего содержания:
---- Hardware ---
-CPU: Intel xeon 2675
-RAM: xxxx 
-Motherboard: XXX XX / Unknown (здесь используйте вывод baseboard-manufacturer и baseboard-product-name. Если информация отсутствует - вывести Unknown )
-System Serial Number: XXXXXX (здесь подразумевается вывод dmidecode -s system-serial-number)
---- System ---
-OS Distribution: xxxxx (например Ubuntu 16.04.4 LTS)
-Kernel version: xxxx (например 4.4.0-116-generic)
-Installation date: xxxx
-Hostname: yyyyy
-Uptime: XX days
-Processes running: 56684
-Users logged in: 665
---- Network ---
-<Iface #1 name>:  IP/mask
-<Iface #2  name>:  IP/mask
-…
-<Iface #N  name>:  IP/mask
+**Задание 4.1 - Сбор сведений о системе**
 
-Дополнительные требования
+Условие задания:
+
+Создайте bash скрипт ‘task4_1.sh’, который собирает базовую информацию об аппаратной части, операционной системе и конфигурации сетевых интерфейсов. В результате выполнения этого скрипта необходимо сформировать файл ‘task4_1.out’ следующего содержания:
+
+    --- Hardware ---
+    CPU: Intel xeon 2675
+    RAM: xxxx 
+    Motherboard: XXX XX / Unknown (здесь используйте вывод baseboard-manufacturer и baseboard-product-name. Если информация отсутствует - вывести Unknown )
+    System Serial Number: XXXXXX (здесь подразумевается вывод dmidecode -s system-serial-number)
+    --- System ---
+    OS Distribution: xxxxx (например Ubuntu 16.04.4 LTS)
+    Kernel version: xxxx (например 4.4.0-116-generic)
+    Installation date: xxxx
+    Hostname: yyyyy
+    Uptime: XX days
+    Processes running: 56684
+    Users logged in: 665
+    --- Network ---
+    <Iface #1 name>:  IP/mask
+    <Iface #2  name>:  IP/mask
+    …
+    <Iface #N  name>:  IP/mask
+
+Дополнительные требования:
     1. Баш скрипт с выполненным заданием должен иметь название ‘task4_1.sh’
     2. Баш скрипт ‘task4_1.sh’ должен быть загружен в гитхаб репозитарий c названием ‘task4_1’
     3. Результаты выполнения скрипта должны быть записаны в файл ‘task4_1.out’
